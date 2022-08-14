@@ -10,4 +10,12 @@ describe("All login scenarios", () => {
     it('H4 should be selected', () => {
         cy.get("h4").contains("Online Banking");
     })
+    it('Sign in button', () => {
+        cy.get('#signin_button').click();
+    })
+    it('Testing inputs commands', () => {
+        cy.get('#signin_button').click();
+        cy.get('input').first().type('username')
+        cy.get('input').eq(1).type('password')
+    })
 });
