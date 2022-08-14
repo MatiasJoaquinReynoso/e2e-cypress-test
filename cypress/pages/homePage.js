@@ -2,7 +2,7 @@ class homePage {
     elements = {
         usernameInput: () => cy.get('#user-name'),
         passwordInput: () => cy.get('#password'),
-        loginBtn: () => cy.get('#login-button')
+        loginBtn: () => cy.get('[data-test="login-button"]')
     }
 
     typeUsername(username){
@@ -14,7 +14,7 @@ class homePage {
     }
 
     clickLogin(){
-        this.elements.loginBtn().click;
+        this.elements.loginBtn().click();
     }
 }
 
